@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incongestion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    canvas {
+      border: 1px solid #000;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Incongestion</h1>
+  <input type="file" id="imageInput" accept="image/*">
+  <br>
+  <label for="scaleFactor">Upscale Factor:</label>
+  <input type="number" id="scaleFactor" min="1" max="10" value="2">
+  <button id="upscaleButton">Upscale Image</button>
+  <button id="gifButton">Create Flickering GIF</button>
+  <br>
+  <canvas id="outputCanvas"></canvas>
+  <img id="gifOutput" style="display: none; margin-top: 20px;" alt="Flickering GIF Output">
+
+  <!-- Use local gif.js -->
+  <script src="gif.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
